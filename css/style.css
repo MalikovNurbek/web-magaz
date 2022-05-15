@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* font-family: 'Lobster', cursive; */
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+ 
+
+}
+
+
+.logo {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+
+
+.navMenu {
+  width: 96%;
+  height: 40px;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  padding: 20px 2%;
+  background-color: rgb(54, 54, 54);
+}
+
+.burgerContainer {
+  width: 30px;
+  min-height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-self: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.burgerContainer .burgerItem {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0px;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+.burgerContainer:hover .burgerItem {
+  background-color: rgb(242, 89, 0);
+}
+
+.trans1 {
+  transform: rotate(-45deg);
+  position: absolute;
+  transition: .4s;
+}
+
+.centerNone {
+  display: none;
+  transition: 6s !important;
+}
+
+.trans2 {
+  transition: .4s;
+  transform: rotate(45deg);
+  position: absolute;
+}
+
+
+.menuContainer {
+  position: absolute;
+  left: 0px;
+  top: 60px;
+  /* border: 1px solid #707070; */
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  width: 200px;
+  max-width: 200px;
+  display: none;
+
+  padding: 0px 20px;
+  margin-left: auto;
+  background-color: #fff;
+  box-shadow: 0x 0px 5px rgba(0, 0, 0, 0.9);
+  transition: 500ms;
+  z-index: 1;
+}
+
+.openMenu {
+  display: flex !important;
+}
+
+
+.menu ul {
+  list-style: none;
+}
+
+.menu ul li {
+  margin: 10px 0px;
+  font-size: 22px;
+  transition: 0.5s;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #000;
+  transition: 0.1s;
+}
+
+
+.menu ul li:hover {
+  transform: translateX(15px);
+}
+
+.menu ul li a:hover {
+  color: rgb(242, 89, 0);
+}
+
+
+/* ======================= header ================== */
+
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky;
+  top: -2px;
+  background-color: #fff;
+  z-index: 10;
+  margin-top: 0;
+}
+
+
+
+.nav1 {
+  width: 92%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 4%;
+  position: relative;
+}
+
+
+.navLogo {
+  display: none;
+  margin: auto !important;
+  position: relative;
+  /* transform: translateX(-100%); */
+}
+
+.mediaIcon {
+  position: absolute;
+  width: 40px !important;
+  display: none;
+  left: 13%;
+  top: 30px;
+}
+
+.navRightSide {
+  display: flex;
+}
+
+
+.nav1  ul {
+  display: flex;
+  list-style: none;
+  margin: auto 0px;
+}
+
+.nav1 ul li {
+  position: relative;
+  margin: 0px 12px;
+}
+
+.nav1 ul li::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 1px;
+  left: 0px;
+  bottom: -5px;
+  background-color: #000;
+  transition: .4s linear all;
+}
+
+.nav1 ul li:hover::before {
+  width: 100%;
+}
+
+.nav1 ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+
+.searchContainer {
+  display: flex;
+  position: relative;
+  margin: 0 20px;
+}
+
+.fa-search {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+.searchContainer #searchInput {
+  width: 150px;
+  border: none;
+  background-color: #f4f4f4;
+  padding: 10px 10px 10px 40px;
+  border-radius: 30px;
+  outline: none;
+  font-size: 18px;
+  font-weight:100;
+}
+
+
+
+.signIn {
+  width: 75px;
+  margin: auto 5px;
+  display: flex;
+}
+
+.signIn a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+
+.signIn a::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #232323;
+  top: 11px;
+  right: -15px;
+  position: absolute;
+}
+
+
+
+
+
+.basketIcon {
+  margin: auto 0px;
+  margin-left: 3%;
+
+}
+
+.basketIcon img {
+  width: 25px;
+  height: 25px;
+}
+
+/* ================= main =============== */
+
+main {
+  width: 92%;
+  padding: 20px 4%;
+}
+
+.banner {
+  width: 100%;
+  height: auto;
+}
+
+.banner .bannerImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+ 
+}
+
+
+.container {
+  margin-top: 60px;
+}
+
+.container h2 {
+  margin: 20px 0px;
+}
+
+
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+  /* grid-auto-rows: 500px; */
+  grid-gap: 10px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  width: 100%;
+  height: auto;
+}
+
+
+.cards .cardImg {
+  width: 100%;
+  max-height: 450px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.productImg {
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  object-fit: cover;
+}
+
+.imgAct{
+  transform: scale(1.1);
+}
+
+ .more {
+  width: 90%;
+  padding: 10px 5%;
+  display: flex;
+  justify-content: space-between;
+}
+
+ .more h4 {
+  margin: auto 0;
+}
+
+ .more .arrow {
+  margin: auto 0;
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+
+ .more .arrowAct {
+  transform: translateX(12px);
+}
+
+
+.FeaturedCategories {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
+
+.categoryItems {
+  height: auto;
+}
+
+.categoryItems div {
+  overflow: hidden;
+  max-height: 623px;
+}
+
+
+.description {
+  position: relative;
+  display: flex;
+  width: 100%;
+  /* height: 200px; */
+}
+
+.description .des {
+  width: 38%;
+  padding: 20px 6%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.description .des h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+.description .des p {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #707070;
+}
+
+.description .des a {
+  text-decoration: none;
+  color: #000;
+  margin: 1rem 0;
+  font-size: 16px;
+  font-weight: 600;
+  position: relative;
+}
+
+.description .des a::before {
+  content: '';
+  position: absolute;
+  width: 0px;
+  height: 1px;
+  background-color: #000;
+  left: 50%;
+  bottom: -5px;
+  transition: .2s linear all;
+}
+.description .des a:hover::before {
+  width: 100%;
+  left: 0px;
+}
+
+.underDescription {
+  position: relative;
+  width: 100%;
+  color: #7a7a7a;
+  font-size: 13px;
+  margin: 30px 0;
+}
+
+
+.underDescription div {
+  font-weight: 600;
+  margin: 1rem 0;
+}
+
+
+.subscriptionContainer {
+  width: 94%;
+  color: #fff;
+  background-color: #c4bfb6;
+  padding: 40px 3%;
+  padding-bottom: 10px;
+  display: flex;
+}
+
+.subscriptionContainer .subscripTitle {
+  width: 40%;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.subscriptionContainer .subscripEmail {
+  width: 50%;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.subscripEmail input {
+  width: 65%;
+  padding: 18px 10px;
+  background-color: #fff;
+  border: none;
+  box-sizing: border-box;
+}
+
+.subscripEmail input::placeholder {
+  color: #707070;
+}
+
+#subscribeBtn {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 33.5%;
+  margin-left: 1.5%;
+  padding: 14px 54px;
+  background-color: #000;
+  color: #fff;
+  box-sizing: border-box;
+  border: none;
+}
+
+.subscripEmail p {
+  font-size: 12px;
+  font-weight: 500;
+  margin: 10px 0px;
+}
+
+.underFooter {
+  width: 92%;
+  padding: 40px 4% 20px;
+  background-color: #000;
+  color: #fff;
+}
+
+.underFooter .aboutUs {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.aboutUs ul {
+  list-style: none;
+  margin: 20px;
+}
+
+.aboutUs ul li {
+  margin: 10px 0px;
+}
+
+.aboutUs ul li span {
+  font-size: 16px;
+}
+
+.aboutUs ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  max-height: 82px;
+}
+
+.social a {
+  width: 25px;
+  height: 25px;
+  padding: 8px 10px;
+  display: flex;
+  margin: 10px 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+.social a:hover {
+  opacity: 0.85;
+}
+
+.social a img {
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+
+.footerEnd {
+  width: 100%;
+  display: flex;
+  padding-top: 20px;
+  justify-content: space-between;
+  border-top: 1px solid #707070;
+}
+
+.footerEnd div {
+  font-size: 12px;
+  color: #7a7a7a;
+}
+.footerEnd div a {
+  text-decoration: none;
+  color: #7a7a7a;
+}
+
+
+
+@media (max-width: 1466px) {
+  .nav1 ul li:nth-last-child(1), .nav1 ul li:nth-last-child(2){
+    display: none;
+  }
+}
+
+
+@media (max-width: 1411px) {
+  .nav1 ul li:nth-last-child(3){
+    display: none;
+  }
+}
+
+
+
+@media (max-width: 1295px) {
+  .nav1 ul li:nth-last-child(4){
+    display: none;
+  }
+
+
+  .subscriptionContainer {
+    flex-direction: column;
+  }
+
+  .subscriptionContainer div {
+    width: 100% !important;
+    margin: 10px 0;
+  }
+  .subscripEmail {
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 1178px) {
+  .nav1 ul li:nth-last-child(5){
+    display: none;
+  }
+}
+
+@media (max-width: 1000px) {
+  .nav1 ul li:nth-last-child(6){
+    display: none;
+  }
+}
+
+@media (max-width: 911px) {
+  .nav1 ul {
+    display: none;
+  }
+  .searchContainer, .logo {
+    display: none;
+  }
+
+  .navLogo, .mediaIcon {
+    display: initial;
+  }
+  
+}
+
+@media (max-width: 735px) {
+
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gridContainer .cards {
+    margin: 20px 0;
+  }
+
+  .description {
+    flex-direction: column;
+  }
+
+  .description .des {
+    width: 90%;
+    padding: 20px 5%;
+  }
+}
+
+@media (max-width: 620px) {
+
+  .signIn {
+    display: none;
+  }
+
+
+  .container h2 {
+    font-size: 20px;
+    margin-top: 0px;
+  }
+
+  .subscripEmail {
+    flex-direction: column;
+  }
+  .subscripEmail input {
+    width: 100%;
+  }
+  #subscribeBtn {
+    width: 100%;
+    margin: 10px 0;
+    padding: 17px 0;
+  }
+}
+
+
+@media (max-width: 400px) {
+  .gridContainer .cards .more h4 {
+    font-size: 14px;
+  }
+}
